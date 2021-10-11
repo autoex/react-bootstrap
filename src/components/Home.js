@@ -45,6 +45,12 @@ const Home = () => {
                 </Row>
             </Container>
             <JumbotronComponent/>
+            <Container style={{marginTop: '2rem'}}>
+                <Row>
+                    <Col md={7}><img src={img4} alt="" height={400}/></Col>
+                    <Col md={5}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Col>
+                </Row>
+            </Container>
         </div>
     );
 };

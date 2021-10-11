@@ -1,4 +1,4 @@
-import { Container} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import img1 from '../img/photo5402186058361320572.jpg';
 import styled from 'styled-components';
 
@@ -25,15 +25,15 @@ position: absolute;
 const JumbotronComponent = () => {
     return (
         <Styles>
-        <div className=" p-5 text-white bg-dark jumbo">
-            <div className="overlay"></div>
-            <Container>
-            <h2>Change the background</h2>
-            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then,
-                mix and match with additional component themes and more.</p>
-            <button className="btn btn-outline-light" type="button">Example button</button>
-            </Container>
-        </div>
+            <div className=" p-5 text-white bg-dark jumbo">
+                <div className="overlay"/>
+                <Container>
+                    <h2>Change the background</h2>
+                    <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look.
+                        Then,
+                        mix and match with additional component themes and more.</p>
+                </Container>
+            </div>
         </Styles>
     );
 };
