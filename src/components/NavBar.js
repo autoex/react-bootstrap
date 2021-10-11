@@ -1,7 +1,10 @@
-import React from 'react';
-import {Button, Container, Nav, Navbar} from "react-bootstrap";
+import React, {useState, useEffect} from 'react';
+import {Container, Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import styled from 'styled-components';
+import LoginNavArea from "./LoginNavArea";
+import ModalWindow from "./Modal";
+
 
 const Styles = styled.div`
 a, .navbar-dark .navbar-nav .nav-link {
@@ -12,7 +15,25 @@ color: white}
 }`
 
 const NavBar = () => {
-    return (
+    const [authData, setAuthData] = useState({
+        name: '',
+        pass: '',
+        auth: false
+    });
+    useEffect(()=> {
+        setAuthData(JSON.parse(localStorage.getItem('user')))
+
+    }, [authData]);
+
+    useEffect(()=>{
+        console.log(localStorage.getItem('user'))
+        setAuthData(JSON.parse(localStorage.getItem('user')))
+    }, []);
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (<>
         <Styles>
             <Navbar bg="dark" variant="dark" expand='lg' collapseOnSelect>
                 <Container>
@@ -30,14 +51,14 @@ const NavBar = () => {
                                 <Link to='/about'>About</Link>
                             </Nav.Link>
                         </Nav>
-                        <Nav>
-                            <Button variant='primary' className='me-2'>Log in</Button>
-                            <Button variant='primary'>Sing out</Button>
-                        </Nav>
+                        <LoginNavArea handleShow={handleShow} authData={authData}  />
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </Styles>
+           <ModalWindow title='Log In' show={show} handleClose={handleClose} authData={authData} setAuthData={setAuthData} />
+        </>
+
 
     );
 };
