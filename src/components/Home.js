@@ -3,12 +3,13 @@ import Slider from "./Slider";
 import {Card, Col, Container, Row} from "react-bootstrap";
 import img4 from '../img/photo5402186058361320575.jpg'
 import Button from "react-bootstrap/Button";
+import JumbotronComponent from "./JumbotronComponent";
 
 const Home = () => {
     return (
         <div>
             <Slider/>
-            <Container className='mt-4'>
+            <Container className='mt-4 mb-4'>
                 <Row>
                     <Col>
                         <Card style={{width: '18rem'}}>
@@ -43,6 +44,7 @@ const Home = () => {
                 </Col>
                 </Row>
             </Container>
+            <JumbotronComponent/>
         </div>
     );
 };
