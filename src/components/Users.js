@@ -1,10 +1,12 @@
 import React from 'react';
+import {Container} from "react-bootstrap";
+import UsersTable from "./UsersTable";
 
 const Users = () => {
     return (
-        <div>
-            Users
-        </div>
+        <Container className='mt-3'>
+            <UsersTable/>
+        </Container>
     );
 };
 

@@ -27,11 +27,12 @@ const JumbotronComponent = () => {
         <Styles>
             <div className=" p-5 text-white bg-dark jumbo">
                 <div className="overlay"/>
-                <Container>
+                <Container style={{position: 'relative', zIndex:1}}>
                     <h2>Change the background</h2>
                     <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look.
                         Then,
                         mix and match with additional component themes and more.</p>
+                    
                 </Container>
             </div>
         </Styles>

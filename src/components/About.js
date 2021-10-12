@@ -1,10 +1,12 @@
 import React from 'react';
+import {Container} from "react-bootstrap";
+import JumbotronComponent from "./JumbotronComponent";
 
 const About = () => {
     return (
-        <div>
-            About
-        </div>
+        <Container className='mt-3'>
+            <JumbotronComponent/>
+        </Container>
     );
 };
 

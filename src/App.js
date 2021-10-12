@@ -5,6 +5,7 @@ import {Route, Switch} from "react-router-dom";
 import Home from "./components/Home";
 import Users from "./components/Users";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 const App = () => {
     return (
@@ -14,8 +15,8 @@ const App = () => {
                 <Route path='/' component={Home} exact/>
                 <Route path='/users' component={Users} exact/>
                 <Route path='/about' component={About} exact/>
-
             </Switch>
+            <Footer/>
         </>
     );
 };
